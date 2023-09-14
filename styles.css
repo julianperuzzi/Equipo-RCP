@@ -1,0 +1,331 @@
+
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Puedes ajustar la cantidad de desplazamiento vertical */
+  transition: opacity 1s ease, transform 1s ease;
+}
+.section-fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* DISEÑO DE CUERPO DE PAGINA */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #051D40;
+  color: rgb(255, 255, 255);
+}
+
+/* BARRA DE NAVEGACION */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  transition: transform 0.7s ease;
+}
+.nav-link {
+  color: #051D40;
+  font-weight: 700;
+}
+
+/* Estilo para el botón cuando está abierto */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  transform: rotate(180deg);
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  overflow: hidden;
+  background-color: #051D40;
+  color: rgb(255, 255, 255);
+  padding: initial;
+}
+
+/* HEADER IMAGEN */
+.img-header {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 80px;
+}
+
+/* TEXTO DE INTRODUCCIÓN */
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 10px;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+/* INTRODUCCIÓN */
+#intro {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+  padding: 0 20px;
+  letter-spacing: 1px;
+}
+
+/* SEPARADORES DE SECCIONES */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #EA5C2F;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5%;
+  text-align: center;
+}
+h5 {
+  color: white;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ESTILO VIDEOS */
+.video-container {
+  max-width: 1000px;
+  margin: 0 10px;
+  border: #ffffff solid 2px;
+}
+
+.video-container iframe {
+  width: 100%;
+}
+
+/* ESTILO BOTÓN */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #56AEFF;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn i {
+  text-align: center;
+}
+
+/* Estilos iniciales para el botón de Descargar Manual */
+.download-button {
+  transition: box-shadow 0.5s, transform 0.5s;
+  animation: breathing 3s infinite;
+}
+
+/* Animación de respiración */
+@keyframes breathing {
+  0%, 100% {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1);
+  }
+  50% {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+  }
+}
+
+/* SECCION RECURSOS DESCARGABLES */
+.seccion-oms {
+  text-align: center;
+  border: #56AEFF solid 2px;
+  border-radius: 17px;
+  background: #121212;
+  justify-content: space-evenly;
+  margin: auto 10px;
+}
+#seccion-oms a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+}
+#seccion-oms h6 {
+  font-weight: bold;
+}
+
+/* Estilos para la sección de la CARRUSEL */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #56AEFF;
+}
+.carousel {
+  max-width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+/* ESTILO seccion DEA */
+.imagen-con-borde {
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #56AEFF;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.imagen-con-borde img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: auto;
+}
+.containerr {
+  justify-content: center;
+  align-items: center;
+  margin: 0px 30px;
+}
+
+/* Estilos para el contenedor de la imagen palpitante */
+.palpitating-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 50px;
+  border-radius: 20px;
+  padding: 10px;
+  animation: pulse 0.6s infinite;
+}
+.palpitating-image-container img {
+  width: 20%;
+  max-width: 400px;
+}
+
+/* Animación para hacer palpitar la imagen */
+@keyframes pulse {
+  0%, 100% {
+      background-color: #56AEFF;
+      border: #ffffff solid 3px;
+  }
+  50% {
+      background-color: #EA5C2F;
+      border: #ffffff solid 3px;
+  }
+}
+
+/* Estilos para la sección de la Playlist de Spotify */
+#spotify-playlist {
+  background-color: #000000d4;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20%;
+}
+.playlist-container p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+}
+#spotify-playlist a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar {
+      margin-bottom: 10px;
+  }
+  .col iframe {
+      height: 300px;
+  }
+  .contenedor, .carousel, #spotify-playlist {
+      margin-bottom: 20px;
+  }
+  .img-header {
+      margin-top: 30px;
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1023px) {
+  h1 {
+      font-size: 22px;
+  }
+  .contenedor {
+      margin-top: 10%;
+  }
+  #intro, #intro1 {
+      font-size: 14px;
+  }
+  .imagen-con-borde img {
+      max-width: 50%;
+      height: auto;
+      margin: auto;
+  }
+}
+
+/* Estilos para PC */
+@media (min-width:1024px) and (max-width: 2048px) {
+  .img-header {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      height: auto;
+  }
+  h1 {
+      font-size: 24px;
+  }
+  #intro, #intro1 {
+      font-size: 20px;
+      margin: 20px 30vh;
+  }
+  h5 {
+      font-size: 20px;
+      font-weight: 700;
+  }
+  .carousel {
+      max-width: 40%;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+  .containerr {
+      margin: auto 30vh;
+  }
+  .imagen-con-borde img {
+      max-width: 25%;
+      height: auto;
+  }
+  .palpitating-image-container {
+      width: 50%;
+      margin: 5vh auto;
+      animation: pulse 0.6s infinite;
+  }
+  #spotify-playlist {
+      margin: 10vh 30vh;
+  }
+}
